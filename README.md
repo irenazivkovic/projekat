@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Pharmacy App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a small project created by [Milos Vukadinovic](https://www.linkedin.com/in/milosvukadinovic/).
 
 ## Available Scripts
 
