@@ -57,10 +57,9 @@ export const Statistics = () => {
   };
 
   return (
-    <Stack direction="row" spacing={5} justifyContent="center">
+    <Stack direction="row" spacing={10} justifyContent="center">
       <Card sx={{
-        maxWidth: 345, display: 'flex', alignItems: 'center', textAlign: 'center',
-      }}
+        maxWidth: 400, display: 'flex', alignItems: 'center', textAlign: 'center'}}
       >
         <CardContent>
           <PieChart
@@ -81,7 +80,7 @@ export const Statistics = () => {
         </CardContent>
       </Card>
       <Card sx={{
-        maxWidth: 1000, display: 'flex', alignItems: 'center', textAlign: 'center',
+        maxWidth: 400, display: 'flex', alignItems: 'center', textAlign: 'center',
       }}
       >
         <CardContent>

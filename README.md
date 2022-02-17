@@ -1,6 +1,6 @@
-# Pharmacy App
+# XG Pharmacy
 
-This is a small project created by [Milos Vukadinovic](https://www.linkedin.com/in/milosvukadinovic/).
+This is a small react project..
 
 ## Available Scripts
 

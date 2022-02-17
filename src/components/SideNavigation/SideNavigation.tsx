@@ -35,6 +35,9 @@ export const SideNavigation: React.FC<ISideNavigationProps> = ({
         width: drawerWidth,
         flexShrink: 0,
         '& .MuiDrawer-paper': { width: drawerWidth, boxSizing: 'border-box' },
+        '& > div': {
+          backgroundColor: 'rgba(235, 235, 201, 0.212)'
+        }
       }}
     >
       <Toolbar />
@@ -58,7 +61,7 @@ export const SideNavigation: React.FC<ISideNavigationProps> = ({
                   }[pageId]
                 }
               </ListItemIcon>
-              <ListItemText primary={pageName} />
+              <ListItemText primary={pageName} sx={{color: 'rgba(0, 0, 0, 0.733)'}}/>
             </ListItem>
           ))}
         </List>

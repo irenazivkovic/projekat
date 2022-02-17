@@ -16,6 +16,14 @@ export const manufacturerData: IManufacturer[] = [
     id: '433221',
     name: 'Torlak',
   },
+  {
+    id: '433521',
+    name: 'Nivea',
+  },
+  {
+    id: '434221',
+    name: 'Loreal',
+  },
 ];
 
 export const initProductsData: IProduct[] = [

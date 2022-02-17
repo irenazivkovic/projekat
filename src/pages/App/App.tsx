@@ -8,7 +8,7 @@ import Toolbar from '@mui/material/Toolbar';
 import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';
 import AppBar from '@mui/material/AppBar';
-import { Link } from '@mui/material';
+import { Link, SvgIcon } from '@mui/material';
 import { SideNavigation } from '../../components/SideNavigation/SideNavigation';
 import { About } from '../../pages/About/About';
 import { Products } from '../Products/Products';
@@ -32,7 +32,7 @@ function App() {
         <CssBaseline />
         <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
           <Toolbar>
-            <Typography variant="h6" noWrap component="div">
+            <Typography variant="h6" noWrap component="div" sx={{alignItems: 'center', display: 'flex'}}>
               <Link
                 to="/products"
                 href="#"
@@ -40,8 +40,10 @@ function App() {
                 underline="none"
                 component={RouterLink}
                 onClick={() => setMenu('products')}
+                sx={{marginLeft: 2, alignItems: 'center', display: 'flex'}}
               >
-                Pharmacy shop
+                <img src="./favicon.png" alt="logo" width="30" height="30" style={{marginRight: 10}}/>
+                <span >XG Pharmacy shop</span>
               </Link>
             </Typography>
           </Toolbar>
