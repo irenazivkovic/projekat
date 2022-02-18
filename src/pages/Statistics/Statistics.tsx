@@ -56,10 +56,21 @@ export const Statistics = () => {
     return preparedData;
   };
 
+  const prepareBarChartDataQuantity = () => {
+    const data = getProductsCost();
+    const preparedData = [];
+    preparedData.push(['Product', 'Quantity', { role: 'style' }]);
+    data.forEach((item) => {
+      preparedData.push([item.name, item.quantity, randomColor()]);
+    });
+
+    return preparedData;
+  };
+
   return (
-    <Stack direction="row" spacing={10} justifyContent="center">
+    <Stack direction="row" spacing={4} justifyContent="center">
       <Card sx={{
-        maxWidth: 400, display: 'flex', alignItems: 'center', textAlign: 'center'}}
+        maxWidth: 300, display: 'flex', alignItems: 'center', textAlign: 'center'}}
       >
         <CardContent>
           <PieChart
@@ -80,7 +91,23 @@ export const Statistics = () => {
         </CardContent>
       </Card>
       <Card sx={{
-        maxWidth: 400, display: 'flex', alignItems: 'center', textAlign: 'center',
+        maxWidth: 300, display: 'flex', alignItems: 'center', textAlign: 'center',
+      }}
+      >
+        <CardContent>
+          <Chart
+            chartType="ColumnChart"
+            width="100%"
+            height="400px"
+            data={prepareBarChartDataQuantity()}
+          />
+          <Typography variant="body2" color="text.secondary" sx={{ p: 3 }}>
+            Bar chart represending the quantity of our products.
+          </Typography>
+        </CardContent>
+      </Card>
+      <Card sx={{
+        maxWidth: 300, display: 'flex', alignItems: 'center', textAlign: 'center',
       }}
       >
         <CardContent>
