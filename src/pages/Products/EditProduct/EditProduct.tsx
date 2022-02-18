@@ -96,7 +96,7 @@ export const EditProduct = () => {
           />
           <LocalizationProvider dateAdapter={AdapterDateFns as unknown as new (...args: any) => MuiPickersAdapter<unknown>}>
             <DatePicker
-              label="Basic example"
+              label="Date added"
               value={product.dateAdded}
               onChange={(e) => {
                 if (e) {
