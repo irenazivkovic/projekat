@@ -33,10 +33,11 @@ export const EditProduct = () => {
     }
   };
 
-  const [product, setProduct] = useState(getProduct() || {} as IProduct);
-
   const manufacturersJSON = localStorage.getItem('manufacturersData');
   const manufacturersData = (manufacturersJSON ? JSON.parse(manufacturersJSON) : []) as IManufacturer[];
+
+  const [product, setProduct] = useState(getProduct() || {dateAdded: new Date(), manufacturer: manufacturersData[0]} as IProduct);
+
 
   const findManufacturer = (id: string) => manufacturersData.find((manufacturer) => manufacturer.id === id) || ({} as IManufacturer);
 
@@ -127,6 +128,7 @@ export const EditProduct = () => {
           component={RouterLink}
           to="/products"
           onClick={() => saveProduct()}
+          disabled={!(product.name && product.price && product.quantity && product.manufacturer.id)}
         >
           Save
         </Button>
