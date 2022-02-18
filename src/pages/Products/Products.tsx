@@ -82,7 +82,8 @@ export const Products = () => {
               <CustomTableHeaderCell>Product name</CustomTableHeaderCell>
               <CustomTableHeaderCell>Manufacturer</CustomTableHeaderCell>
               <CustomTableHeaderCell>Price</CustomTableHeaderCell>
-              <CustomTableHeaderCell>Expiry date</CustomTableHeaderCell>
+              <CustomTableHeaderCell>Quantity</CustomTableHeaderCell>
+              <CustomTableHeaderCell>Introduced on</CustomTableHeaderCell>
               <CustomTableHeaderCell />
             </TableRow>
           </CustomTableHead>
@@ -101,7 +102,8 @@ export const Products = () => {
                   </TableCell>
                   <TableCell>{row.manufacturer.name}</TableCell>
                   <TableCell>{`€${row.price}`}</TableCell>
-                  <TableCell>{displayDate(row.expiryDate)}</TableCell>
+                  <TableCell>{row.quantity}</TableCell>
+                  <TableCell>{displayDate(row.dateAdded)}</TableCell>
                   <TableCell>
                     <Button component={RouterLink} to={`products/edit/${row.id}`}>
                       <FiEdit2 />

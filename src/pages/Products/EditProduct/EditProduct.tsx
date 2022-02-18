@@ -97,15 +97,27 @@ export const EditProduct = () => {
           <LocalizationProvider dateAdapter={AdapterDateFns as unknown as new (...args: any) => MuiPickersAdapter<unknown>}>
             <DatePicker
               label="Basic example"
-              value={product.expiryDate}
+              value={product.dateAdded}
               onChange={(e) => {
                 if (e) {
-                  setProduct({ ...product, expiryDate: e });
+                  setProduct({ ...product, dateAdded: e });
                 }
               }}
               renderInput={(params) => <TextField {...params} />}
             />
           </LocalizationProvider>
+        </div>
+        <div>
+          <TextField
+            id="quantity"
+            label="Quantity"
+            type="number"
+            variant="standard"
+            value={product.quantity}
+            onChange={(e) => {
+              setProduct({ ...product, quantity: Number(e.target.value) });
+            }}
+          />
         </div>
       </Box>
       <Stack direction="row" spacing={2} justifyContent="flex-end" sx={{ p: 4 }}>

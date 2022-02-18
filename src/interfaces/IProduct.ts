@@ -5,5 +5,6 @@ export interface IProduct {
     name: string,
     manufacturer: IManufacturer,
     price: number,
-    expiryDate: Date
+    quantity: number,
+    dateAdded: Date
 }
